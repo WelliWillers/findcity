@@ -1,11 +1,11 @@
 <div id="about"> 
-  <h1>:red_circle: CelCompanies</h1>
+  <h1>:red_circle: Find.City</h1>
   
   <p>
-    This project was developed with the aim of listing the companies registered in a fake API and their respective means of contact </br>
+    This project was developed with the aim of listing the continents registered in a fake API and their respective cities </br>
   </p>
   
-  <img style="width:100%;" src="https://github.com/WelliWillers/CelFocus-/blob/main/public/capa.png?raw=true">
+  <!-- <img style="width:100%;" src="https://github.com/WelliWillers/CelFocus-/blob/main/public/capa.png?raw=true"> -->
 </div>
 
 
@@ -44,7 +44,7 @@ Besides, it's good to have an editor to work with the code like [Visual Studio C
 ```bash
 
     # Acess the repo and start the install process
-    $ cd celfocus
+    $ cd findcity
 
     # Install the dependencies
     $ npm install
