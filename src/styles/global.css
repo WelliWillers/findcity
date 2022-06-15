@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+    width: .4rem;
+    background-color: #c9c9c9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--chakra-colors-primary-normal);
+    border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color:  var(--chakra-colors-primary-hover);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color:  var(--chakra-colors-primary-hover) !important;
+}
