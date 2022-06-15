@@ -1,70 +1,108 @@
-import { Button, Heading, Icon, Text, Link } from "@chakra-ui/react";
+import { Button, Heading, Icon, Text, Link, Box } from "@chakra-ui/react";
 import axios from "axios"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
-import { RiArrowLeftLine, RiArrowRightLine, RiErrorWarningFill, RiPhoneLine, RiSmartphoneLine } from "react-icons/ri";
+import { RiArrowLeftLine, RiErrorWarningFill } from "react-icons/ri";
 import { toast } from "react-toastify";
 import { CardBox } from "../../components/Layout/CardBox";
 import CommunsParts from "../../components/Layout/CommunsParts"
 
-interface NumbersProps {
-    id: string;
-    type: string;
-    company_id: number;
+import { Navigation, Autoplay, EffectFade } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import "swiper/css/bundle";
+
+interface ImageProps {
+    image: string;
 }
 
-export default function Number(){
+interface citysProps {
+    id: string;
+    name: string;
+    continent_id: number;
+    description: string;
+    images: ImageProps[];
+}
+
+export default function City(){
 
     const router = useRouter()
-    const [ selectedNumber, setSelectedNumber ] = useState<NumbersProps>({
+    const [ selectedCity, setSelectedCity ] = useState<citysProps>({
         id: '',
-        type: '',
-        company_id: 0
+        name: '',
+        description: '',
+        images: [],
+        continent_id: 0
     })
 
-    const { numberId } = router.query
+    const { id } = router.query
 
     async function loadNumbersOfCompany() {
-        await axios.get(`/phone_numbers?id=${numberId}`)
+        await axios.get(`/cities?id=${id}`)
             .then((response) => {
                 const data = response.data
-                setSelectedNumber(data[0])
+                setSelectedCity(data[0])
             })
             .catch(function (error) {
-                toast.warning('Numbers not found!');
+                toast.warning('Cidade não encontrada!');
             })
     }
 
     useEffect(() => {
         loadNumbersOfCompany();
-    }, [numberId]);
+    }, [id]);
 
-    if(selectedNumber){
+    if(selectedCity){
         return (
-            <CommunsParts title={`Number ${selectedNumber.id}`} subtitle={`Type of number contact: ${selectedNumber.type && selectedNumber.type.toLocaleUpperCase()}`}>
-                <CardBox notLink key={selectedNumber.id} height="280px" >
-                    <Icon color="primary.normal" as={selectedNumber.type == "mobile" ? RiSmartphoneLine : RiPhoneLine} fontSize="50"/>
+            <CommunsParts title={`Cidade ${selectedCity.name}`} subtitle={`Veja algumas imagens desta cidade.`}>
+                <CardBox notLink key={selectedCity.id} height="180px" >
                     <Heading fontSize="25">
-                        {selectedNumber.id}
+                        {selectedCity.name}
                     </Heading>  
-                    <Text fontSize="md" color="gray.400">Type of number:  {selectedNumber.type.toLocaleUpperCase()}</Text>
-                    <Link as="a" href={`tel:${selectedNumber.id}`}>
-                        <Button as="div" variant="outline" borderColor="primary.normal" color="primary.normal"  size="lg">Call to this number <Icon ml="4" fontSize={20} as={RiArrowRightLine} /></Button>
-                    </Link>
+                    <Text fontSize="md" color="gray.400">{selectedCity.description}</Text>
                 </CardBox>
+                <Box my="8">
+                    <Heading>Algumas imagens</Heading>
+                </Box>
+                <Box width="100%" minHeight="40vh">
+                    <Swiper
+                        spaceBetween={5}
+                        autoplay={{
+                            delay: 2500,
+                        }}
+                        centeredSlides={true}
+                        loop={true}
+                        effect={"fade"}
+                        navigation={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[EffectFade, Autoplay, Navigation]}
+                    >
+                        {
+                            selectedCity.images.map((image) => {
+                                return (
+                                    <SwiperSlide>
+                                        <Box borderRadius={30} minHeight="60vh" w={"100%"} height="100%" backgroundSize="cover" backgroundImage={image.image} />
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
+                    </Swiper>
+                </Box>
             </CommunsParts>
         )
     } else {
         return (
-            <CommunsParts title={`Number not found`} subtitle={``}>
+            <CommunsParts title={`Cidade não encontrada`} subtitle={`Volte e tente outra`}>
                 <CardBox notLink height="280px" >
                     <Icon color="primary.normal" as={RiErrorWarningFill} fontSize="50"/>
                     <Heading fontSize="25">
-                        This number not exists!
+                        Esta cidade não existe!
                     </Heading>  
-                    <Text fontSize="md" color="gray.400">Go back to home</Text>
+                    <Text fontSize="md" color="gray.400">Volte para o início</Text>
                     <Link as="a" href="/">
-                        <Button as="div" variant="outline" borderColor="primary.normal" color="primary.normal"  size="lg"> <Icon mr="4" fontSize={20} as={RiArrowLeftLine} />Home</Button>
+                        <Button as="div" variant="outline" borderColor="primary.normal" color="primary.normal"  size="lg"> <Icon mr="4" fontSize={20} as={RiArrowLeftLine} />Início</Button>
                     </Link>
                 </CardBox>
             </CommunsParts>

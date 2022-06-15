@@ -7,22 +7,209 @@
         { "id": 5, "name": "Oceania", "description": "description continente 5", "image_url": "/images/banner_02.jpg" }
     ],
     "cities": [
-        { "id": 1, "name": "cidade nome 01", "description": "descrição cidade 01", "image_url": "",  "continent_id": 1 },
-        { "id": 2, "name": "cidade nome 02", "description": "descrição cidade 02", "image_url": "",  "continent_id": 2 },
-        { "id": 3, "name": "cidade nome 03", "description": "descrição cidade 03", "image_url": "",  "continent_id": 1 },
-        { "id": 4, "name": "cidade nome 04", "description": "descrição cidade 04", "image_url": "",  "continent_id": 3 },
-        { "id": 5, "name": "cidade nome 05", "description": "descrição cidade 05", "image_url": "",  "continent_id": 3 },
-        { "id": 6, "name": "cidade nome 06", "description": "descrição cidade 06", "image_url": "",  "continent_id": 5 },
-        { "id": 7, "name": "cidade nome 07", "description": "descrição cidade 07", "image_url": "",  "continent_id": 5 },
-        { "id": 8, "name": "cidade nome 08", "description": "descrição cidade 08", "image_url": "",  "continent_id": 2 },
-        { "id": 9, "name": "cidade nome 09", "description": "descrição cidade 09", "image_url": "",  "continent_id": 4 },
-        { "id": 10, "name": "cidade nome 10", "description": "descrição cidade 10", "image_url": "",  "continent_id": 4 },
-        { "id": 11, "name": "cidade nome 11", "description": "descrição cidade 11", "image_url": "",  "continent_id": 2 },
-        { "id": 12, "name": "cidade nome 12", "description": "descrição cidade 12", "image_url": "",  "continent_id": 2 },
-        { "id": 13, "name": "cidade nome 13", "description": "descrição cidade 13", "image_url": "",  "continent_id": 4 },
-        { "id": 14, "name": "cidade nome 14", "description": "descrição cidade 14", "image_url": "",  "continent_id": 1 },
-        { "id": 15, "name": "cidade nome 15", "description": "descrição cidade 15", "image_url": "",  "continent_id": 2 },
-        { "id": 16, "name": "cidade nome 16", "description": "descrição cidade 16", "image_url": "",  "continent_id": 5 },
-        { "id": 17, "name": "cidade nome 17", "description": "descrição cidade 17", "image_url": "",  "continent_id": 4 }
+        { 
+            "id": 1, 
+            "name": "Nova York", 
+            "description": "descrição cidade 01", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 1 
+        },
+        { 
+            "id": 2, 
+            "name": "Maiamy", 
+            "description": "descrição cidade 02", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 2 
+        },
+        { 
+            "id": 3, 
+            "name": "Maiamy", 
+            "description": "descrição cidade 03", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 1 
+        },
+        { 
+            "id": 4, 
+            "name": "cidade nome 04", 
+            "description": "descrição cidade 04", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 3 
+        },
+        { 
+            "id": 5, 
+            "name": "cidade nome 05", 
+            "description": "descrição cidade 05", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 3 
+        },
+        { 
+            "id": 6, 
+            "name": "cidade nome 06", 
+            "description": "descrição cidade 06", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 5 
+        },
+        { 
+            "id": 7, 
+            "name": "cidade nome 07", 
+            "description": "descrição cidade 07", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 5 
+        },
+        { 
+            "id": 8, 
+            "name": "cidade nome 08", 
+            "description": "descrição cidade 08", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 2 
+        },
+        { 
+            "id": 9, 
+            "name": "cidade nome 09", 
+            "description": "descrição cidade 09", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 4 
+        },
+        { 
+            "id": 10, 
+            "name": "cidade nome 10", 
+            "description": "descrição cidade 10", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 4 
+        },
+        { 
+            "id": 11, 
+            "name": "cidade nome 11", 
+            "description": "descrição cidade 11", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 2 
+        },
+        { 
+            "id": 12, 
+            "name": "cidade nome 12", 
+            "description": "descrição cidade 12", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 2 
+        },
+        { 
+            "id": 13, 
+            "name": "cidade nome 13", 
+            "description": "descrição cidade 13", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 4 
+        },
+        { 
+            "id": 14, 
+            "name": "cidade nome 14", 
+            "description": "descrição cidade 14", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 1 
+        },
+        { 
+            "id": 15, 
+            "name": "cidade nome 15", 
+            "description": "descrição cidade 15", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 2 
+        },
+        { 
+            "id": 16, 
+            "name": "cidade nome 16", 
+            "description": "descrição cidade 16", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 5 
+        },
+        { 
+            "id": 17, 
+            "name": "cidade nome 17", 
+            "description": "descrição cidade 17", 
+            "images": [
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_02.jpg"},
+                {"image":"/images/banner_03.jpg"},
+                {"image":"/images/banner_01.jpg"}
+            ],  
+            "continent_id": 4 
+        }
     ]
 }

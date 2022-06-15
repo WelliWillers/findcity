@@ -32,7 +32,7 @@ export function CardBox({children, notLink = false, height = "180px", router}:Ca
                 color={CardBoxTextColorTheme}
                 minHeight={height}
                 borderRadius={30}
-                boxShadow="md"
+                boxShadow="2xl"
                 padding={5}       
                 transition="border 200ms"
                 _hover={{

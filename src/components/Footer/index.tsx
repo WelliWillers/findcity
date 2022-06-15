@@ -10,7 +10,7 @@ export function Footer({...rest}){
     })
 
     return (
-        <Flex  boxShadow="lg" {...rest} bgColor={FooterColorTheme} as="footer" w="100%" alignItems="center"  flexDirection={{base:'column', lg:'row'}} py="3" px="6">
+        <Flex  boxShadow="lg" {...rest} bgColor={FooterColorTheme} as="footer" w="100%" alignItems="center" flexDirection={{base:'column', lg:'row'}} py="3" px="6">
             <Flex justifyContent="space-between" w="100%" alignItems="center" maxWidth={1480} mx="auto">
                 <Box>
                     <Text fontSize="sm">©2022 All rights reserved.</Text>

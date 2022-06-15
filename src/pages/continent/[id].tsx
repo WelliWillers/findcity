@@ -23,7 +23,7 @@ interface CitiesProps {
     continent_id: number;
 }
 
-export default function Company(){
+export default function Continent(){
 
     const router = useRouter()
     const { id } = router.query
@@ -44,7 +44,7 @@ export default function Company(){
                     setSelectedContinent(data)
                 })
                 .catch( (error) => {
-                    toast.warning('Buscando continente ')
+                    // toast.warning('Buscando continente ')
                 })
         }
         
@@ -66,18 +66,22 @@ export default function Company(){
 
 
     return (
-        <CommunsParts title={selectedContinent.name && selectedContinent.name} subtitle="Conheça as melhores cidades para se viver neste continente.">
-            <Box mb="12" height="40vh" borderRadius={30} position="relative" backgroundPosition={"center"} backgroundImage={selectedContinent.image_url}>
-                <Flex alignItems="center" justifyContent="center" height="100%" flexDirection={"column"}>
-                    <Box bgColor="gray.900" position={"absolute"} width="100%" height="100%" borderRadius={30} zIndex={8} opacity={.8}/>
-                    <Heading color="primary.normal" fontSize="30" zIndex={9}>
-                        {selectedContinent.name && selectedContinent.name}
-                    </Heading>
-                    <Text color="gray.50" zIndex={9}>
-                        {selectedContinent.description}
-                    </Text>
-                </Flex>
-            </Box>
+        <CommunsParts title={selectedContinent.name ? selectedContinent.name : "Este continente não existe"} subtitle={selectedContinent.name ? 'Conheça as melhores cidades para se viver neste continente.' : ''}>
+            {
+                cities.length > 0 && (
+                    <Box mb="12" height="40vh" borderRadius={30} position="relative" backgroundPosition={"center"} backgroundImage={selectedContinent.image_url} >
+                        <Flex alignItems="center" justifyContent="center" height="100%" flexDirection={"column"}>
+                            <Box sx={{ filter: 'blur(8px)' }} bgColor="gray.900" position={"absolute"} width="100%" height="100%" borderRadius={30} zIndex={8} opacity={.8}/>
+                            <Heading color="primary.normal" fontSize="30" zIndex={9}>
+                                {selectedContinent.name && selectedContinent.name}
+                            </Heading>
+                            <Text color="gray.50" zIndex={9}>
+                                {selectedContinent.description}
+                            </Text>
+                        </Flex>
+                    </Box>
+                )
+            }
 
             <SimpleGrid width="100%" columns={{base: 1, md: 2, lg: 3}} spacing={8}>
             {
@@ -90,7 +94,7 @@ export default function Company(){
                             </Heading>  
                         </CardBox>
                     )
-                }) : (<Text color="primary.normal" textAlign={{base: "center", md: "left"}} fontSize="md">Nenhuma cidade neste continente encontrada.</Text>)
+                }) : (<Text color="primary.normal" textAlign={{base: "center", md: "left"}} fontSize="md">Nenhuma cidade encontrada para este continente.</Text>)
             }
             </SimpleGrid>
         </CommunsParts>

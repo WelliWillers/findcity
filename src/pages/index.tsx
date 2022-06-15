@@ -61,16 +61,21 @@ export default function Home() {
               modules={[EffectFade, Autoplay, Navigation, Pagination]}
           >
               <SwiperSlide>
-                <Box borderRadius={30} minHeight="60vh" height="100%" backgroundSize="cover" backgroundImage={"/images/banner_01.jpg"} />
+                <Box borderRadius={30} minHeight={{base: "40vh", lg: "50vh"}} height="100%" backgroundSize="cover" backgroundImage={"/images/banner_01.jpg"} />
               </SwiperSlide>
               <SwiperSlide>
-                <Box borderRadius={30} minHeight="60vh" height="100%" backgroundSize="cover" backgroundImage={"/images/banner_02.jpg"} />
+                <Box borderRadius={30} minHeight={{base: "40vh", lg: "50vh"}} height="100%" backgroundSize="cover" backgroundImage={"/images/banner_02.jpg"} />
               </SwiperSlide>
               <SwiperSlide>
-                <Box borderRadius={30} minHeight="60vh" height="100%" backgroundSize="cover" backgroundImage={"/images/banner_03.jpg"} />
+                <Box borderRadius={30} minHeight={{base: "40vh", lg: "50vh"}} height="100%" backgroundSize="cover" backgroundImage={"/images/banner_03.jpg"} />
               </SwiperSlide>
           </Swiper>
       </Box>
+      
+      <Box mb="8">
+        <Heading>Continentes encontrados</Heading>
+      </Box>
+
       <SimpleGrid width="100%" columns={{base: 1, md: 2, lg: 3}} spacing={8}>
         {
           continents.length ?
