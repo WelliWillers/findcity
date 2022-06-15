@@ -55,11 +55,11 @@ export default function City(){
     if(selectedCity){
         return (
             <CommunsParts title={`Cidade ${selectedCity.name}`} subtitle={`Veja algumas imagens desta cidade.`}>
-                <CardBox notLink key={selectedCity.id} height="180px" >
+                <CardBox notLink key={selectedCity.id} height="280px" >
                     <Heading fontSize="25">
                         {selectedCity.name}
                     </Heading>  
-                    <Text fontSize="md" color="gray.400">{selectedCity.description}</Text>
+                    <Text fontSize="md" wordBreak="normal" color="gray.400" width="100%">{String(selectedCity.description)}</Text>
                 </CardBox>
                 <Box my="8">
                     <Heading>Algumas imagens</Heading>

@@ -5,7 +5,7 @@
     This project was developed with the aim of listing the continents registered in a fake API and their respective cities </br>
   </p>
   
-  <!-- <img style="width:100%;" src="https://github.com/WelliWillers/CelFocus-/blob/main/public/capa.png?raw=true"> -->
+  <img style="width:100%;" src="https://github.com/WelliWillers/findcity/blob/main/public/capa.png?raw=true">
 </div>
 
 

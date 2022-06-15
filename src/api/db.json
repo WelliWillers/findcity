@@ -21,8 +21,8 @@
         },
         { 
             "id": 2, 
-            "name": "Maiamy", 
-            "description": "descrição cidade 02", 
+            "name": "Maiami", 
+            "description": "Em Miami, você encontra tudo o que precisa para curtir as férias dos seus sonhos.", 
             "images": [
                 {"image":"/images/banner_03.jpg"},
                 {"image":"/images/banner_02.jpg"},
